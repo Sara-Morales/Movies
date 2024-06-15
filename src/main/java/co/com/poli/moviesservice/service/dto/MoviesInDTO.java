@@ -21,3 +21,4 @@ public class MoviesInDTO {
     @Max(value = 5, message = "La calificación máxima es 5")
     private Integer rating;
 }
+
