@@ -2,48 +2,19 @@ package co.com.poli.moviesservice.helpers;
 
 public class Response {
 
-    private Integer code;
+    private int code;
     private Object data;
 
-    public static class Builder {
-        private Integer code;
-        private Object data;
-
-        public Builder() {}
-
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        public Builder data(Object data) {
-            this.data = data;
-            return this;
-        }
-
-        public Response build() {
-            Response response = new Response();
-            response.setCode(this.code);
-            response.setData(this.data);
-            return response;
-        }
-    }
-
-    public Response() {}
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
+    public Response(int code, Object data) {
         this.code = code;
+        this.data = data;
+    }
+
+    public int getCode() {
+        return code;
     }
 
     public Object getData() {
         return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
     }
 }

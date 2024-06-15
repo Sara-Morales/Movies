@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /api/v1/poli
+  port: 9082
+spring:
+  application:
+    name: moviesservice
+  profiles:
+    active: dev

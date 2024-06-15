@@ -1,5 +1,8 @@
 package co.com.poli.moviesservice.persistence.entity;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,17 +16,21 @@ import jakarta.persistence.*;
 public class Movies {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
-    @javax.validation.constraints.NotNull
     private Long id;
 
-    @Column
+    @NotEmpty(message = "El título no puede estar vacío")
+    @Column(name = "title")
     private String title;
 
-    @Column
+    @NotEmpty(message = "El director no puede estar vacío")
+    @Column(name = "director")
     private String director;
 
-    @Column
+    @Min(value = 1, message = "El rating mínimo es 1")
+    @Max(value = 5, message = "El rating máximo es 5")
+    @Column(name = "rating")
     private int rating;
+
 }

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class MoviesService {
+public class MoviesServiceImpl implements IMoviesServices {
 
     private final MoviesRepository moviesRepository;
 
