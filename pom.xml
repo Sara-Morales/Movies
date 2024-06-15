@@ -7,8 +7,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version> <!-- Ajustar a la versión específica de Spring Boot -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>3.3.0</version>
+        <relativePath/>
     </parent>
     
     <groupId>co.com.poli</groupId>
@@ -18,8 +18,8 @@
     <description>Movies Service Application</description>
     
     <properties>
-        <java.version>17</java.version> <!-- Versión de Java a utilizar -->
-        <spring-cloud.version>2023.0.2</spring-cloud.version> <!-- Versión de Spring Cloud compatible con Spring Boot 3.3.0 -->
+        <java.version>17</java.version>
+        <spring-cloud.version>2023.0.2</spring-cloud.version>
     </properties>
     
     <dependencies>
@@ -28,45 +28,40 @@
     		<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
-        <!-- Spring Boot Starter Data JPA -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         
-        <!-- Spring Boot Starter Web -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        
-        <!-- Spring Cloud Netflix Eureka Client -->
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        
-        <!-- Spring Cloud OpenFeign -->
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        
-        <!-- H2 Database -->
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-        
-        <!-- Spring Boot Starter Test (for testing) -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        
-        <!-- Lombok (si se está utilizando, opcional) -->
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -76,7 +71,6 @@
     
     <dependencyManagement>
         <dependencies>
-            <!-- Import Spring Cloud dependencies -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -89,7 +83,6 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

@@ -68,7 +68,7 @@ public class MoviesController {
     }
 
     private List<Map<String, String>> formatMessage(BindingResult result) {
-        // Método para formatear los mensajes de error de validación
-        return null; // Aquí deberías implementar la lógica para formatear los mensajes de error
+
+        return null;
     }
 }
